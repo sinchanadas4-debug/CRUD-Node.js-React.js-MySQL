@@ -19,7 +19,7 @@ export default function ViewStudent() {
 
     async function fetchStudent(studentId) {
         try {
-            const response = await axios.get(`http://localhost:5000/students/${studentId}`);
+            const response = await axios.get(`/api/students/${studentId}`);
             setStudent(response.data[0]);
         }
         catch(error) {

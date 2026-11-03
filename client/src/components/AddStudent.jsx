@@ -20,7 +20,7 @@ export default function AddStudent() {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/students', data);
+      const response = await axios.post('/api/students', data);
       setData(null);
       navigate('/');
       return {status: response.status, success: 'Student Added Successfully !', data: response.data};

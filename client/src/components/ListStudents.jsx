@@ -12,7 +12,7 @@ export default function ListStudents() {
 
     async function fetchData() {
         try {
-            const response = await axios.get('http://localhost:5000/students');
+            const response = await axios.get('/api/students');
             setStudents(response.data);
         }
         catch(error) {
@@ -27,7 +27,7 @@ export default function ListStudents() {
    // Delete a Student by ID
    const handleDelete = async function(id) {
       try {
-        const response = await axios.delete(`http://localhost:5000/students/${id}`);
+        const response = await axios.delete(`/api/students/${id}`);
         return {status: response.status, data: response.data};
       }
       catch(error) {
