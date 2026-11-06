@@ -1,5 +1,5 @@
 
-  # Student CRUD App with Jenkins CI/CD on AWS
+# Student Management App - Dockerized 3-Tier with Jenkins CI/CD on AWS
   ![Node JS & React JS CRUD](./client/src/assets/project-banner.png)
   # Table of contents  
   1. Overview 
