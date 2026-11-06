@@ -18,7 +18,7 @@ export default function EditStudent() {
     // Get Data
     async function getStudent(studentId) {
         try {
-            const response = await axios.get(`http://localhost:5000/students/${studentId}`);
+            const response = await axios.get(`/api/students/${studentId}`);
             setData(response.data[0]);
         }
         catch(error) {
@@ -44,7 +44,7 @@ export default function EditStudent() {
     const handleSave = async function(event) {
         event.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:5000/students/${id}`, data);
+            const response = await axios.put(`/api/students/${id}`, data);
             navigate('/');
             return response.json({status: response.status, data: response.data});
         }
