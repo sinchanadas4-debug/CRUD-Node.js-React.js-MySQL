@@ -87,7 +87,10 @@ app.put('/students/:id', function(request, response) {
 // Delete All
 app.delete('/students', function(request, response) {
     const query = 'DELETE FROM students';
-    db.query(query, function(error, data) {});
+    db.query(query, function(error, data) {
+        if (error) return response.json(error);
+        return response.json(data);
+    });
 });
 
 // Delete a Student by ID
